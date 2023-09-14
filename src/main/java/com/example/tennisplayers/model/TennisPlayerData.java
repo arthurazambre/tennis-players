@@ -2,7 +2,7 @@ package com.example.tennisplayers.model;
 
 public class TennisPlayerData {
 
-    private String id;
+    private int id;
     private String firstname;
     private String lastname;
     private String shortname;
@@ -11,11 +11,11 @@ public class TennisPlayerData {
     private String picture;
     private TennisPlayerDataData data;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

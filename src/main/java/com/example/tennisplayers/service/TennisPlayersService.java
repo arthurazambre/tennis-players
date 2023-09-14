@@ -1,5 +1,6 @@
 package com.example.tennisplayers.service;
 
+import com.example.tennisplayers.model.TennisPlayerData;
 import com.example.tennisplayers.model.TennisPlayersData;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,5 +21,15 @@ public class TennisPlayersService {
 
     public TennisPlayersData getData() {
         return tennisPlayersData;
+    }
+
+    public TennisPlayerData getPlayerData(Long id) {
+        for (TennisPlayerData tennisPlayerData : tennisPlayersData.getPlayers()) {
+            if (tennisPlayerData.getId() == id) {
+                return tennisPlayerData;
+            }
+        }
+
+        return null;
     }
 }
