@@ -2,6 +2,7 @@ package com.example.tennisplayers.controller;
 
 import com.example.tennisplayers.model.TennisPlayerData;
 import com.example.tennisplayers.model.TennisPlayersData;
+import com.example.tennisplayers.model.TennisPlayersStats;
 import com.example.tennisplayers.service.TennisPlayersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -34,5 +35,10 @@ public class TennisPlayersController {
         }
 
         return ResponseEntity.ok(tennisPlayersService.getPlayerData(id));
+    }
+
+    @GetMapping("/players/stats")
+    public ResponseEntity<TennisPlayersStats> playersGetStats() {
+        return ResponseEntity.ok(tennisPlayersService.getStats());
     }
 }
