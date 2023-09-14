@@ -12,3 +12,14 @@ For building and running the application you need:
 ```shell
 mvn spring-boot:run
 ```
+
+OR execute the jar file using
+```shell
+java -jar .\tennis-players-0.0.1-SNAPSHOT.jar
+```
+
+## Testing the endpoints
+
+- Task 1: http://localhost:8080/players
+- Task 2: http://localhost:8080/players/52 (replace 52 by any other id)
+- Task 3: http://localhost:8080/players/stats
